@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シンプルQRコード</title>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../index.html" class="home-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          ホーム
+        </a>
+        <h1>シンプルQRコード</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="qr-form">
+        <div class="input-group">
+          <label for="qrText">テキストまたはURL</label>
+          <input
+            type="text"
+            id="qrText"
+            placeholder="QRコードに変換するテキストを入力..."
+          />
+        </div>
+        <div class="input-group">
+          <label for="qrSize">サイズ</label>
+          <select id="qrSize">
+            <option value="128">小 (128x128)</option>
+            <option value="256" selected>中 (256x256)</option>
+            <option value="512">大 (512x512)</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="qrColor">色</label>
+          <input type="color" id="qrColor" value="#000000" />
+        </div>
+        <button id="generateBtn">QRコードを生成</button>
+      </div>
+
+      <div class="qr-result" id="qrResult">
+        <div class="qr-code-container">
+          <div id="qrCode"></div>
+        </div>
+        <div class="qr-actions">
+          <button id="downloadBtn" disabled>ダウンロード</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

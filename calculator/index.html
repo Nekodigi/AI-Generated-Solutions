@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電卓アプリ</title>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../index.html" class="home-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          ホーム
+        </a>
+        <h1 style="margin: 0; font-size: 1.5rem; color: #339af0">電卓</h1>
+      </div>
+    </header>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="result" readonly />
+      </div>
+      <div class="buttons">
+        <button class="operator" onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="deleteLastChar()">←</button>
+        <button class="operator" onclick="appendOperator('%')">%</button>
+        <button class="operator" onclick="appendOperator('/')">/</button>
+
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button class="operator" onclick="appendOperator('*')">×</button>
+
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button class="operator" onclick="appendOperator('-')">-</button>
+
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button class="operator" onclick="appendOperator('+')">+</button>
+
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="appendNumber('.')">.</button>
+        <button class="equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

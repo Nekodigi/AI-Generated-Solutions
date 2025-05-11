@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シンプルメモ</title>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../index.html" class="home-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          ホーム
+        </a>
+        <h1>シンプルメモ</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="note-form">
+        <input type="text" id="noteTitle" placeholder="タイトル" />
+        <textarea id="noteContent" placeholder="メモを入力..."></textarea>
+        <div class="note-actions">
+          <button id="addNoteBtn">メモを追加</button>
+        </div>
+      </div>
+
+      <div class="notes-grid" id="notesGrid">
+        <!-- メモはJavaScriptで動的に追加されます -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シンプルSNS</title>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="../index.html" class="home-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+            ホーム
+          </a>
+          <h1 class="app-title">シンプルSNS</h1>
+        </div>
+        <div class="header-right">
+          <span id="username">ゲスト</span>
+          <button id="loginBtn">ログイン</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <div class="post-form">
+          <textarea id="postContent" placeholder="いまどうしてる？"></textarea>
+          <button id="postBtn">投稿</button>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <!-- 投稿はJavaScriptで動的に追加されます -->
+        </div>
+      </main>
+    </div>
+
+    <!-- ログインモーダル -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h2>ログイン</h2>
+        <input type="text" id="loginUsername" placeholder="ユーザー名" />
+        <button id="loginSubmitBtn">ログイン</button>
+        <button id="closeModalBtn">キャンセル</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
